@@ -51,6 +51,18 @@ public class singlyLinkedList {
         head = head.next;
     }
 
+    // Delete At the End
+    public void deleteAtEnd(){
+        Node temp = head;
+        Node pre = null;
+        while(temp.next != null){
+            pre = temp;
+            temp = temp.next;
+        }
+        assert pre != null;
+        pre.next = null;
+    }
+
 
 
 
