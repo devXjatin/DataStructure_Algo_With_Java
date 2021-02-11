@@ -29,5 +29,13 @@ public class doublyLinkedList {
         head = newNode;
     }
 
+    //Delete At beginning
+
+    public void deleteAtBeginning(){
+        head = head.next;
+        head.previous = null;
+    }
+
+
 
 }
