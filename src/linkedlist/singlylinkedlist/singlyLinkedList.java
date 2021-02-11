@@ -63,6 +63,27 @@ public class singlyLinkedList {
         pre.next = null;
     }
 
+    //Delete At the Position
+    public void deleteAtPosition(int pos){
+        Node current = head;
+        Node previous = null;
+        if(head == null){
+            System.out.println("Element Not Found!!");
+        }
+       else{
+            for (int i = 0; i < pos-1; i++) {
+                    previous = current;
+                    current = current.next;
+
+            }
+            if(current == head){
+                head = null;
+            }
+            else{
+                previous.next = current.next;
+            }
+        }
+    }
 
 
 
