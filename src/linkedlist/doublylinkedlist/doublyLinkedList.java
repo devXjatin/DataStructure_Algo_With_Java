@@ -29,6 +29,16 @@ public class doublyLinkedList {
         head = newNode;
     }
 
+    //Traverse
+    public void traverseLinkedList(){
+        Node temp = head;
+        while (temp != null){
+            System.out.print(temp.data+" ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+
     //Delete At beginning
 
     public void deleteAtBeginning(){
@@ -36,6 +46,19 @@ public class doublyLinkedList {
         head.previous = null;
     }
 
+    //Delete From End
 
+    public void deleteFromEnd(){
+        Node temp = head;
+        Node pre = null;
+        while (temp.next != null){
+            pre = temp;
+            temp = temp.next;
+        }
+        assert pre != null;
+        pre.next = null;
+        temp.previous = null;
+
+    }
 
 }
