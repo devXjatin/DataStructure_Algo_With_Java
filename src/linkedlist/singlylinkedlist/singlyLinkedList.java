@@ -8,7 +8,7 @@ public class singlyLinkedList {
 
     //Insert A Node
     public void insert(Node newnode){
-        if(head == newnode){
+        if(head == null){
             head = newnode;
         }
         else{
@@ -29,4 +29,12 @@ public class singlyLinkedList {
         }
         System.out.println(); //For next Line after completing the loop
     }
+
+    //Insert A node At Beginning
+    public void insertAtBeginning(Node newNode){
+        newNode.next = head;
+        head = newNode;
+    }
+
+
 }
