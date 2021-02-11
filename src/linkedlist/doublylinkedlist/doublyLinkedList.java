@@ -36,7 +36,7 @@ public class doublyLinkedList {
             System.out.print(temp.data+" ");
             temp = temp.next;
         }
-        System.out.println();      //for next line
+       System.out.println();    //for next line
     }
 
     //Delete At beginning
