@@ -36,5 +36,19 @@ public class singlyLinkedList {
         head = newNode;
     }
 
+    //Insertion A Node Specific Position
+    public void insertAtSpecific(int pos, Node newNode){
+        Node temp = head;
+        for (int i = 0; i < pos-1; i++) {
+            temp = temp.next;
+        }
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
+
+
+
+
+
 
 }
