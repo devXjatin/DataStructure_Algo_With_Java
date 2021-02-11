@@ -46,6 +46,10 @@ public class singlyLinkedList {
         temp.next = newNode;
     }
 
+    //Delete At Beginning
+    public void deleteAtBeginning(){
+        head = head.next;
+    }
 
 
 
