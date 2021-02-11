@@ -21,5 +21,13 @@ public class doublyLinkedList {
         }
     }
 
+    //Insertion a Node At beginning
+
+    public void insertAtBeginning(Node newNode){
+        newNode.next = head;
+        head.previous = newNode;
+        head = newNode;
+    }
+
 
 }
