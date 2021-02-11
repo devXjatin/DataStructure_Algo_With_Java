@@ -23,7 +23,7 @@ public class singlyLinkedList {
     //Traversing or Printing
     public void traverseLinkedList(){
         Node temp = head;
-        while(temp.next != null){
+        while(temp!= null){
             System.out.print(temp.data+" ");
             temp = temp.next;
         }
