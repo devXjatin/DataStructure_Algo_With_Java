@@ -59,7 +59,7 @@ public class singlyLinkedList {
             pre = temp;
             temp = temp.next;
         }
-        assert pre != null;
+       // assert pre != null;
         pre.next = null;
     }
 
