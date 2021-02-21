@@ -1,4 +1,4 @@
-package queue;
+package queuebyarray.circularyqueue;
 
 import java.util.Scanner;
 

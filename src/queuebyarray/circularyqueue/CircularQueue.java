@@ -1,4 +1,4 @@
-package queue;
+package queuebyarray.circularyqueue;
 
 public class CircularQueue {
     int begin;
@@ -63,6 +63,7 @@ public class CircularQueue {
             }
             else {
                 System.out.println(arr[begin] + " is deleted.");
+                arr[begin] = 0;
                 begin = (begin + 1) % sizeOfArray;
                 sizeOfQueue--;
             }
@@ -76,10 +77,10 @@ public class CircularQueue {
         int temp = begin;
         System.out.println("Queue Elements: ");
         while (temp != top){
-            System.out.println(arr[temp]);
+            System.out.print(arr[temp]+"\t");
             temp = (temp+1)%sizeOfArray;
         }
-        System.out.println(arr[temp]);
+        System.out.println(+arr[temp]);
         System.out.println("Size Of Queue: "+sizeOfQueue);
         System.out.println();
     }// end of the method
