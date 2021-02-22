@@ -10,7 +10,7 @@ public class PalindromeMain {
         String string = scn.nextLine();
         StackPalindrome stackPalindrome = new StackPalindrome(string.length());
         QueuePalindrome queuePalindrome = new QueuePalindrome(string.length());
-        Palindrome palindrome = new Palindrome();
+       // Palindrome palindrome = new Palindrome();
         for (int i = 0; i < string.length(); i++) {
             char character = string.charAt(i);
             if((character >= 'a' && character <= 'z') || (character >= 'A' && character <= 'Z')){
@@ -25,19 +25,19 @@ public class PalindromeMain {
         stackPalindrome.displayStack();
         queuePalindrome.display();
         palindrome.palindromeString(sb);*/
-        boolean flag=true;
+        boolean flag=false;
         for (int i = 0; i < string.length(); i++) {
             char a = stackPalindrome.popCharacter();
             char b = queuePalindrome.dequeueCharacter();
             if(a != b){
-                flag=false;
+                flag=true;
                 break;
 
             }
         }
       /*  System.out.println(sb1);
         System.out.println(sb2);*/
-        if(!flag){
+        if(flag){
             System.out.println("not palindrome");
         }
         else{
