@@ -1,5 +1,4 @@
 package stack.stackbylinkedlist;
 
-public class StackNode {
-
+public class StackByLinkedList {
 }
