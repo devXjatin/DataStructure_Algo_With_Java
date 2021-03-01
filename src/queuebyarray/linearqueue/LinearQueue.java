@@ -5,7 +5,7 @@ public class LinearQueue {
     int top;
     int sizeOfArray;
     int[] arr;
-    int sizeOfQueue;
+    int sizeofQueue;
 
     public LinearQueue(int sizeOfArray){
         arr = new int[sizeOfArray];
@@ -16,7 +16,7 @@ public class LinearQueue {
 
     /**
      * to check Queue is full or not.
-     * @return
+     * @return true or false
      */
     public boolean isFull(){
         return top == sizeOfArray-1;
@@ -24,7 +24,7 @@ public class LinearQueue {
 
     /**
      * to check queue is empty.
-     * @return
+     * @return true or false
      */
     public boolean isEmpty(){
         return top == -1;
@@ -44,12 +44,12 @@ public class LinearQueue {
                 begin++;
                 top++;
                 System.out.println(arr[begin]+" is Inserted.");
-                sizeOfQueue++;
+                sizeofQueue++;
             }
             else{
                 arr[top+1] = data;
                 top++;
-                sizeOfQueue++;
+                sizeofQueue++;
                 System.out.println(arr[top]+" is Inserted..");
 
             }
@@ -67,7 +67,7 @@ public class LinearQueue {
             System.out.println(arr[begin]+" is Deleted.");
             arr[begin] = 0;
             begin++;
-            sizeOfQueue--;
+            sizeofQueue--;
         }
     }// end of the method
 
@@ -80,13 +80,13 @@ public class LinearQueue {
             System.out.print(arr[i]+" \t");
         }
         System.out.println();
-        System.out.println("Size Of Queue: "+sizeOfQueue);
+        System.out.println("Size Of Queue: "+ sizeofQueue);
         System.out.println();   //for next line after completing the loop.
     }// end of the method
 
     /**
      * return the top value in queue.
-     * @return
+     * @return arr[top]
      */
     public int peek(){
         return arr[top];
