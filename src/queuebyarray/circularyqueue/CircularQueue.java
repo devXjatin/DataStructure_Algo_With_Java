@@ -5,7 +5,6 @@ public class CircularQueue {
     int top;
     int[] arr;
     int sizeOfArray;
-    int sizeOfQueue;
 
     public CircularQueue(int sizeOfArray){
         arr = new int[sizeOfArray];
@@ -42,12 +41,10 @@ public class CircularQueue {
                 arr[begin + 1] = data;
                 begin++;
                 top++;
-                sizeOfQueue++;
                 System.out.println(arr[begin]+" is Inserted.");
             } else {
                 top = (top + 1) % sizeOfArray;
                 arr[top] = data;
-                sizeOfQueue++;
                 System.out.println(arr[top]+" is Inserted.");
             }
         }
@@ -65,7 +62,6 @@ public class CircularQueue {
                 System.out.println(arr[begin] + " is deleted.");
                 arr[begin] = 0;
                 begin = (begin + 1) % sizeOfArray;
-                sizeOfQueue--;
             }
     }// end of the method
 
@@ -81,16 +77,15 @@ public class CircularQueue {
             temp = (temp+1)%sizeOfArray;
         }
         System.out.println(+arr[temp]);
-        System.out.println("Size Of Queue: "+sizeOfQueue);
         System.out.println();
     }// end of the method
 
     /**
-     * return top value in array.
-     * @return
+     *
+     * @return return top value in array.
      */
     public int peek(){
-        return arr[top];
+        return arr[begin];
     }
 
 }
