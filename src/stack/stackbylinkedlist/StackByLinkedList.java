@@ -20,6 +20,7 @@ public class StackByLinkedList {
     public void pushElement(Node newnode){
         if(isEmpty()){
             topOfStack = newnode;
+            topOfStack.next = null;
             System.out.println(topOfStack.data+" is Inserted.");
         }
         else{

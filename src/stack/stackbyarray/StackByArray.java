@@ -3,8 +3,10 @@ package stack.stackbyarray;
 public class StackByArray {
     int arr[];
     int topOfStack;
+    int size;
     public StackByArray(int size){
         arr = new int[size];
+        this.size = size;
         topOfStack = -1;
     }
     //To check stack is empty or not
@@ -18,7 +20,7 @@ public class StackByArray {
      */
 
     public void pushElement(int data){
-        if(topOfStack != arr.length-1) {
+        if(topOfStack != size-1) {
             arr[topOfStack + 1] = data;
             topOfStack++;
             System.out.println(data + " is push");
@@ -61,7 +63,7 @@ public class StackByArray {
     //Display The stack
     public void display(){
         System.out.println("Values: ");
-        for(int i = topOfStack; i>-1; i--)
+        for(int i = topOfStack; i>=0; i--)
         {
             System.out.println(arr[i]);
 

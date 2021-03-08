@@ -85,10 +85,10 @@ public class LinearQueue {
     }// end of the method
 
     /**
-     * return the top value in queue.
+     * return the top value in queue.(Which means value at the front position i.e. begin)
      * @return arr[top]
      */
     public int peek(){
-        return arr[top];
+        return arr[begin];
     }//end of the method
 }
